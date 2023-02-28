@@ -70,6 +70,14 @@ export const signup = ({first_name, last_name, email, password}) => async dispat
     return response;
 };
 
+export const logout = () => async (dispatch) => {
+    const response = await csrfFetch("/api/session", {
+        method: "DELETE"
+    });
+    storeCurrentUser(null);
+    dispatch(removeCurrentUser());
+    return response;
+};
 
 
 const initialState = { user: null }
