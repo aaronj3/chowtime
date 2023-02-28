@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { Link } from "react-router-dom";
 
 function ProfileButton({ user }) {
     const dispatch = useDispatch();
@@ -12,16 +13,18 @@ function ProfileButton({ user }) {
     };
 
     useEffect(() => {
-    if (!showMenu) return;
+        if (!showMenu) return;
 
-    const closeMenu = () => {
-        setShowMenu(false);
-    };
+        const closeMenu = () => {
+            setShowMenu(false);
+        };
 
-    document.addEventListener('click', closeMenu);
+        document.addEventListener('click', closeMenu);
 
-    return () => document.removeEventListener("click", closeMenu);
-    }, [showMenu]);
+        return () => document.removeEventListener("click", closeMenu);}
+        , [showMenu]);
+
+
 
     const logout = (e) => {
         e.preventDefault();
@@ -35,10 +38,21 @@ function ProfileButton({ user }) {
         </button>
     {showMenu && (
     <ul className="profile-dropdown">
-        <li>{user.username}</li>
-        <li>{user.email}</li>
+        <p>Hello, {user.firstName}</p>
         <li>
-            <button onClick={logout}>Log Out</button>
+            <Link>My Profile</Link>
+        </li>
+
+        <li>
+            <Link>My Dining History</Link>
+        </li>
+
+        <li>
+            <Link>My Saved Restaurants</Link>
+        </li>
+
+        <li>
+            <button onClick={logout}>Sign Out</button>
         </li>
     </ul>
     )}

@@ -39,7 +39,6 @@ function SignupFormPage() {
 
 
 
-
     return(
         <form onSubmit={handleSubmit}>
             <ul>
