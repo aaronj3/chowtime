@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './SignupForm.css'
 
-function SignupFormPage() {
+function SignupForm() {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [first_name, setFirstName] = useState('')
@@ -36,7 +36,6 @@ function SignupFormPage() {
         }
         return setErrors(['Confirm Password field must be the same as the Password field']);
     };
-
 
 
     return(
@@ -87,4 +86,4 @@ function SignupFormPage() {
     )
 }
 
-export default SignupFormPage
+export default SignupForm
