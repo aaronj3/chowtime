@@ -18,5 +18,8 @@
   "homepage": "https://github.com/aaronj3/chowtime#readme",
   "engines": {
     "node": "16.18.1"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

@@ -12,6 +12,10 @@ label {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.profile-button{
+    position: absolute;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
