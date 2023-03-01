@@ -1,12 +1,18 @@
-.sign-up-button {
+#sign-up-button {
     background-color: #417D9B;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
-    margin-left: 8px;
-    margin-right: 8px;
-    border: solid;
-    padding: 16px;
     border-color: #417D9B;
+}
+
+input {
     border-radius: .1875rem;
-    text-decoration: none;
+    border: 0.5px solid;
+    border-color:#D8D9DB;
+    transition: 0.2s;
+}
+
+input:hover {
+    border-color: black;
+    border-radius: .1875rem;
+    border: 0.5px solid
 }

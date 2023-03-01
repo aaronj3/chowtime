@@ -4,9 +4,48 @@
 }
 
 .nav-bar {
-    display: flex;
+    list-style-type: none;
+    padding: 0px;
 }
 
 label {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nav-button {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 16px;
+    border: solid;
+    border-color: gray;
+    border-radius: .1875rem;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+}
+
+.modal-button{
+    background-color:#A93233;
+    color: white;
+    border-radius: .1875rem;
+    border: solid;
+}
+
+.modal-button:hover {
+    background-color:  #A22D2B;
 }

@@ -17,8 +17,15 @@ ApplicationRecord.transaction do
 
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
+
     User.create!(
-      username: 'aaronjung3',
+      first_name: 'Demo',
+      last_name: 'Account',
+      email: 'demo@gmail.com',
+      password: 'password'
+    )
+
+    User.create!(
       first_name: 'Aaron',
       last_name: 'Jung',
       email: 'aaronjung3@gmail.com',
@@ -26,7 +33,6 @@ ApplicationRecord.transaction do
     )
 
     User.create!(
-      username: 'kchoe5',
       first_name: 'Kevin',
       last_name: 'Choe',
       email: 'kchoe@gmail.com',
@@ -34,7 +40,6 @@ ApplicationRecord.transaction do
     )
 
     User.create!(
-      username: 'bsong',
       first_name: 'Brian',
       last_name: 'Song',
       email: 'bsong@medallion.com',
@@ -42,7 +47,6 @@ ApplicationRecord.transaction do
     )
 
     User.create!(
-      username: 'karaskye',
       first_name: 'Kara',
       last_name: 'Lee',
       email: 'karaskye@gmail.com',
@@ -50,12 +54,12 @@ ApplicationRecord.transaction do
     )
 
     User.create!(
-      username: 'jckirby',
       first_name: 'John',
       last_name: 'Kirby',
       email: 'jck@gmail.com',
       password: 'password'
     )
+
 
     puts "Done!"
   end

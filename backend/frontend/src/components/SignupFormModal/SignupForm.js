@@ -44,6 +44,8 @@ function SignupForm() {
                 {errors.map(error=> <li key={error}>{error}</li>)}
             </ul>
 
+            <h3>Make an account</h3>
+
             <label>First name
                 <input type='text'
                 value={first_name}
@@ -51,7 +53,7 @@ function SignupForm() {
                 required/>
             </label>
 
-            <label>Last Name
+            <label>Last name
                 <input type='text'
                 value={last_name}
                 onChange={(e) => setLastName(e.target.value)}
@@ -73,7 +75,7 @@ function SignupForm() {
                 required/>
             </label>
 
-            <label>Confirm Password
+            <label>Confirm password
             <input
                 type="password"
                 value={confirmPassword}
@@ -81,7 +83,7 @@ function SignupForm() {
                 required/>
             </label>
 
-            <button type='submit'>Sign up</button>
+            <button class="modal-button" type='submit'>Sign up</button>
         </form>
     )
 }

@@ -17,19 +17,24 @@ function Navigation(){
     } else {
     sessionLinks = (
         <>
-            <LoginFormModal/>
-
             <SignupFormModal/>
+            <LoginFormModal/>
         </>
     );
     }
 
     return (
     <ul class="nav-bar">
-        <li>
-            <NavLink exact to="/"><img class="logo" src="https://cdn.otstatic.com/cfe/11/images/opentable-logo-153e80.svg" /></NavLink>
-            {sessionLinks}
-        </li>
+        <div class="nav-container">
+
+            <li>
+                <NavLink exact to="/"><img class="logo" src="https://cdn.otstatic.com/cfe/11/images/opentable-logo-153e80.svg" /></NavLink>
+            </li>
+            <li>
+                {sessionLinks}
+            </li>
+
+        </div>
     </ul>
     );
 }

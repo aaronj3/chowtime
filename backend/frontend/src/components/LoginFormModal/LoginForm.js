@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import "./LoginForm.css";
+import DemoLogin from "./DemoLogin";
 
 function LoginForm() {
     const dispatch = useDispatch();
@@ -32,6 +33,11 @@ function LoginForm() {
         <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
+        <h3>Enter your email and password</h3>
+        <p>
+            Enter the login credentials associated with your OpenTable account.
+        </p>
+
         <label>
         Email
         <input
@@ -41,6 +47,9 @@ function LoginForm() {
             required
         />
         </label>
+
+        <br/>
+
         <label>
         Password
         <input
@@ -50,7 +59,10 @@ function LoginForm() {
             required
         />
         </label>
-        <button type="submit">Log In</button>
+
+        <br/>
+
+        <button class="modal-button" type="submit">Log In</button>
     </form>
     );
 }

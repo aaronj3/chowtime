@@ -1,0 +1,22 @@
+{
+  "name": "chowtime",
+  "version": "1.0.0",
+  "description": "ChowTime is a clone of the restaurant reservation app, OpenTable",
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronj3/chowtime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronj3/chowtime/issues"
+  },
+  "homepage": "https://github.com/aaronj3/chowtime#readme",
+  "engines": {
+    "node": "16.18.1"
+  }
+}
