@@ -5,11 +5,13 @@ import { Route, Switch } from 'react-router-dom';
 import Navigation from "./components/Navigation";
 import LoginForm from './components/LoginFormModal/LoginForm';
 import SignupForm from './components/SignupFormModal/SignupForm';
+import SearchSplash from './components/SearchSplash';
 
 function App() {
   return (
     <>
       <Navigation />
+      <SearchSplash />
         <Switch>
           <Route path="/login">
             <LoginForm />
