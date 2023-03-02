@@ -61,5 +61,32 @@ ApplicationRecord.transaction do
     )
 
 
+    Restaurant.create!(
+      name: "Aaltro Paradiso",
+      price_range: "$$$$",
+      cuisine: "Italian" ,
+      address: "234 Spring St, New York, NY 10013",
+      neighborhood: "SoHo",
+      menu: "Spaghetti Pomodoro, Rigatoni Alla Gricia, Wagyu Burger"
+    )
+
+    Restaurant.create!(
+      name: "Hama Sushi",
+      price_range: "$$",
+      cuisine: "Japanese",
+      address: "347 E 2nd St, Los Angeles, CA 90012",
+      neighborhood: "Little Tokyo",
+      menu: "Omakase"
+    )
+
+    Restaurant.create!(
+      name: "Yong Su San",
+      price_range: "$$$",
+      cuisine: "Korean",
+      address: "950 S. Vermont Ave., Los Angeles, 90006",
+      neighborhood: "Koreatown",
+      menu: "Galbijjim, Kaesung Bossam Kimchi, Yukhoe Bibimbap"
+    )
+
     puts "Done!"
   end
