@@ -1,1 +1,10 @@
 /* TODO Add site wide styles */
+
+@font-face {
+    font-family: 'brandon text';
+    src: url("./assets/fonts/Brandon/HvDTrial_Brandon_Text_Regular.otf");
+}
+
+* {
+    font-family: "brandon text";
+}

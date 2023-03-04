@@ -1,10 +1,10 @@
 export const RECEIVE_RESTAURANTS = "restaurants/receive"
 export const RECEIVE_RESTAURANT = "restaurant/receive"
 
-const receiveRestaurants = (restaurants) => (
+const receiveRestaurants = (payload) => (
     {
         type: RECEIVE_RESTAURANTS,
-        restaurants
+        payload
     });
 
 const receiveRestaurant = (restaurant) => (
@@ -41,7 +41,8 @@ export const fetchRestaurant = (restaurantId) => async dispatch => {
 export default function restaurantsReducer(oldState = {}, action) {
     switch (action.type) {
         case RECEIVE_RESTAURANTS:
-            return {...action.restaurants}
+            // return {...action.payloads.restaurants}
+            return action.payload.restaurants
         case RECEIVE_RESTAURANT:
             let newState = {...oldState}
             return {...newState, [action.restaurant.id] : action.restaurant}

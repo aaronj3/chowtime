@@ -24,11 +24,11 @@ function Navigation(){
     }
 
     return (
-    <ul class="nav-bar">
-        <div class="nav-container">
+    <ul className="nav-bar">
+        <div className="nav-container">
 
             <li>
-                <NavLink exact to="/"><img class="logo" src="https://cdn.otstatic.com/cfe/11/images/opentable-logo-153e80.svg" /></NavLink>
+                <NavLink exact to="/"><img className="logo" src="https://cdn.otstatic.com/cfe/11/images/opentable-logo-153e80.svg" /></NavLink>
             </li>
             <li>
                 {sessionLinks}

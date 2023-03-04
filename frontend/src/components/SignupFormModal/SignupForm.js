@@ -83,7 +83,7 @@ function SignupForm() {
                 required/>
             </label>
 
-            <button class="modal-button" type='submit'>Sign up</button>
+            <button className="modal-button" type='submit'>Sign up</button>
         </form>
     )
 }

@@ -6,18 +6,29 @@ import Navigation from "./components/Navigation";
 import LoginForm from './components/LoginFormModal/LoginForm';
 import SignupForm from './components/SignupFormModal/SignupForm';
 import SearchSplash from './components/SearchSplash';
+import SplashIndex from './components/SplashIndex';
+import RestaurantProfile from './components/RestaurantProfile';
 
 function App() {
   return (
     <>
       <Navigation />
-      <SearchSplash />
         <Switch>
-          <Route path="/login">
+          <Route exact path="/login">
             <LoginForm />
           </Route>
-          <Route path="/signup">
+
+          <Route exact path="/signup">
             <SignupForm />
+          </Route>
+
+          <Route exact path="/">
+            <SearchSplash />
+            <SplashIndex />
+          </Route>
+
+          <Route exact path="/restaurants/:restaurantId">
+            <RestaurantProfile/>
           </Route>
         </Switch>
     </>
