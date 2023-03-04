@@ -15,7 +15,7 @@ function DemoLogin() {
 
     return (
         <form onSubmit={handleLogin}>
-            <button class = "modal-button" type="submit">Login with a demo account</button>
+            <button className = "modal-button" type="submit">Login with a demo account</button>
         </form>
         )
 }

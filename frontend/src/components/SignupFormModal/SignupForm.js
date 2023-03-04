@@ -44,44 +44,62 @@ function SignupForm() {
                 {errors.map(error=> <li key={error}>{error}</li>)}
             </ul>
 
-            <h3>Make an account</h3>
+            <h2 className="modal-CTA-header">Make an account</h2>
 
-            <label>First name
-                <input type='text'
+            <label className>
+                <input className="form-field"
+                placeholder='First name'
+                type='text'
                 value={first_name}
                 onChange={(e) => setFirstName(e.target.value)}
                 required/>
             </label>
 
-            <label>Last name
-                <input type='text'
+            <br/>
+
+            <label>
+                <input className="form-field"
+                placeholder='Last name'
+                type='text'
                 value={last_name}
                 onChange={(e) => setLastName(e.target.value)}
                 required/>
             </label>
 
+            <br/>
 
-            <label>Email
-                <input type='email'
+            <label>
+                <input className="form-field"
+                placeholder='Email'
+                type='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required/>
             </label>
 
-            <label>Password
-                <input type='password'
+            <br/>
+
+            <label>
+                <input className="form-field"
+                placeholder='Password'
+                type='password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required/>
             </label>
 
-            <label>Confirm password
-            <input
+            <br/>
+
+            <label>
+            <input className="form-field"
+                placeholder='Confirm password'
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required/>
             </label>
+
+            <br/>
 
             <button className="modal-button" type='submit'>Sign up</button>
         </form>

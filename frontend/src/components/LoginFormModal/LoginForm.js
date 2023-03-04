@@ -33,36 +33,40 @@ function LoginForm() {
         <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
-        <h3>Enter your email and password</h3>
-        <p>
-            Enter the login credentials associated with your OpenTable account.
-        </p>
+        <div className="form-container">
+            <div className="form-body-container" >
+                <h2 className="modal-CTA-header">Enter your email and password</h2>
+                <p className="modal-CTA-subtext">
+                    Enter the login credentials associated with your OpenTable account.
+                </p>
 
-        <label>
-        Email
-        <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-        />
-        </label>
+                <label>
+                <input className="form-field"
+                    placeholder='Email'
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                </label>
 
-        <br/>
+                <br/>
 
-        <label>
-        Password
-        <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-        />
-        </label>
+                <label>
+                <input className="form-field"
+                    placeholder='Password'
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                </label>
 
-        <br/>
+            <br/>
 
         <button className="modal-button" type="submit">Log In</button>
+            </div>
+        </div>
     </form>
     );
 }

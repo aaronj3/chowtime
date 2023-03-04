@@ -3,16 +3,3 @@
     color: white;
     border-color: #417D9B;
 }
-
-input {
-    border-radius: .1875rem;
-    border: 0.5px solid;
-    border-color:#D8D9DB;
-    transition: 0.2s;
-}
-
-input:hover {
-    border-color: black;
-    border-radius: .1875rem;
-    border: 0.5px solid
-}
