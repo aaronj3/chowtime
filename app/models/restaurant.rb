@@ -17,4 +17,7 @@ class Restaurant < ApplicationRecord
     validates :name, :price_range, :cuisine, :neighborhood, :address, :menu, presence: true
     validates :name, :address, uniqueness: true
 
+    has_many :reviews
+    has_many :reservations
+
 end

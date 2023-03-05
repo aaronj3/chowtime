@@ -10,10 +10,14 @@ ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
+    Restaurant.destroy_all
+    Review.destroy_all
 
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
+    ApplicationRecord.connection.reset_pk_sequence!('restaurants')
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
@@ -87,6 +91,38 @@ ApplicationRecord.transaction do
       neighborhood: "Koreatown",
       menu: "Galbijjim, Kaesung Bossam Kimchi, Yukhoe Bibimbap"
     )
+
+    Review.create!(
+      author_id: 1,
+      restaurant_id: 1,
+      overall: 5,
+      food: 5,
+      service: 5,
+      ambience: 5,
+      body: "One of my favorite restaurants in Manhattan south of Houston. Immaculate vibes"
+    )
+
+    Review.create!(
+      author_id: 2,
+      restaurant_id: 2,
+      overall: 4,
+      food: 5,
+      service: 5,
+      ambience: 4,
+      body: "No frills sushi by some of the most dedicated chefs. Recommend the softshell crab."
+    )
+
+    Review.create!(
+      author_id: 5,
+      restaurant_id: 3,
+      overall: 5,
+      food: 5,
+      service: 5,
+      ambience: 5,
+      body: "That shit was bussin fr fr"
+    )
+
+
 
     puts "Done!"
   end
