@@ -2,6 +2,27 @@
     background-color: white;
     color: black;
     border-color: gray;
+
+    display: inline-block;
+}
+
+#alternate-button-container {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.alternate-button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+    cursor: pointer;
+}
+
+.alternate-button:hover {
+    text-decoration: underline;
 }
 
 /* form {

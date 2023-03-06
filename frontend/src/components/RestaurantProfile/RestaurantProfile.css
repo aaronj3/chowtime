@@ -1,0 +1,92 @@
+.restaurant-profile-main-container {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: -51px;
+    position: relative;
+}
+
+.restaurant-profile-container-1 {
+    background-color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 32px;
+    padding: 0 16px calc(128px - 0.25rem);
+    width: 40rem;
+}
+
+.restaurant-name {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+
+.restaurant-overview-header {
+    grid-gap: 16px;
+    align-items: center;
+    column-count: 4;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    margin-top: 16px;
+}
+
+.overview-header-item {
+    display: flex;
+    align-items: center;
+}
+
+
+.icon-container {
+    display: inline-block;
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 1;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    margin-right: 4px;
+}
+
+.restaurant-description{
+    margin-top: 32px;
+}
+
+
+.tab-container {
+    background: #fff;
+    padding-top: 16px;
+    position: sticky;
+    top: -0.0625rem;
+    transition: all .15s ease-in-out;
+    z-index: 2;
+}
+
+.navi-tabs {
+    box-shadow: inset 0 -0.0625rem 0 0 #d8d9db;
+    position: relative;
+    display: block;
+}
+
+.tabs {
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.section-header {
+    border-bottom: 0.0625rem solid #d8d9db;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 16px;
+    padding-bottom: 16px;
+}
+
+.profile-section-container {
+    margin-top: 64px;
+}
+
+.header-text {
+    margin: 0;
+}

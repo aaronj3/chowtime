@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import LoginForm from './LoginForm';
 import "./LoginForm.css";
-import DemoLogin from './DemoLogin';
+import { Link } from 'react-router-dom';
 
-function LoginFormModal() {
-  const [showModal, setShowModal] = useState(false);
+function LoginFormModal({loginFormShow, setSignupFormShow, setLoginFormShow}) {
+
 
   return (
     <>
-      <button className="nav-button" id="log-in-button" onClick={() => setShowModal(true)}>Log In</button>
-      {showModal && (
-        <Modal className="modal" onClose={() => setShowModal(false)}>
-          <LoginForm />
+      <button className="nav-button" id="log-in-button" onClick={() => setLoginFormShow(true)}>Log In</button>
+      {loginFormShow && (
+        <Modal className="modal" onClose={() => setLoginFormShow(false)}>
+          <LoginForm setLoginFormShow={setLoginFormShow} setSignupFormShow={setSignupFormShow} />
           <br/>
-          <DemoLogin/>
         </Modal>
       )}
     </>

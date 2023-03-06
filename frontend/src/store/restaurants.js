@@ -23,7 +23,7 @@ export const getRestaurant = (restaurantId) => (state) => (
 
 
 export const fetchRestaurants = () => async dispatch => {
-    const response = await fetch('/api/restaurants')
+const response = await fetch('/api/restaurants')
     if (response.ok) {
         const restaurants = await response.json();
         dispatch(receiveRestaurants(restaurants))

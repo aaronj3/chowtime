@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import './SignupForm.css'
 
-function SignupForm() {
+function SignupForm({ setSignupFormShow, setLoginFormShow } ) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [first_name, setFirstName] = useState('')
@@ -37,8 +37,14 @@ function SignupForm() {
         return setErrors(['Confirm Password field must be the same as the Password field']);
     };
 
+    const changeModal = (e) => {
+        setSignupFormShow(false);
+        setLoginFormShow(true);
+    }
+
 
     return(
+        <>
         <form onSubmit={handleSubmit}>
             <ul>
                 {errors.map(error=> <li key={error}>{error}</li>)}
@@ -103,6 +109,13 @@ function SignupForm() {
 
             <button className="modal-button" type='submit'>Sign up</button>
         </form>
+
+
+        <div id="alternate-button-container">
+            <button className="alternate-button" onClick={changeModal}>Log In</button>
+        </div>
+
+        </>
     )
 }
 

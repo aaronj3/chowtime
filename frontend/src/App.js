@@ -14,13 +14,13 @@ function App() {
     <>
       <Navigation />
         <Switch>
-          <Route exact path="/login">
+          {/* <Route exact path="/login">
             <LoginForm />
           </Route>
 
           <Route exact path="/signup">
             <SignupForm />
-          </Route>
+          </Route> */}
 
           <Route exact path="/">
             <SearchSplash />

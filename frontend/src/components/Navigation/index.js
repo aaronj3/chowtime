@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
@@ -8,6 +8,8 @@ import './Navigation.css';
 
 function Navigation(){
     const sessionUser = useSelector(state => state.session.user);
+    const [signupFormShow, setSignupFormShow ] = useState(false);
+    const [loginFormShow, setLoginFormShow ] = useState(false);
 
     let sessionLinks;
     if (sessionUser) {
@@ -17,8 +19,8 @@ function Navigation(){
     } else {
     sessionLinks = (
         <>
-            <SignupFormModal/>
-            <LoginFormModal/>
+            <SignupFormModal signupFormShow={signupFormShow} setSignupFormShow={setSignupFormShow} setLoginFormShow={setLoginFormShow}/>
+            <LoginFormModal loginFormShow={loginFormShow} setSignupFormShow={setSignupFormShow} setLoginFormShow={setLoginFormShow}/>
         </>
     );
     }
@@ -26,9 +28,8 @@ function Navigation(){
     return (
     <ul className="nav-bar">
         <div className="nav-container">
-
             <li>
-                <NavLink exact to="/"><img className="logo" src="https://cdn.otstatic.com/cfe/11/images/opentable-logo-153e80.svg" /></NavLink>
+                <NavLink exact to="/"><img className="logo" src="https://cdn.otstatic.com/cfe/11/images/opentable-logo-153e80.svg"/></NavLink>
             </li>
             <li>
                 {sessionLinks}
