@@ -1,0 +1,37 @@
+.page-header {
+    background: #fff;
+    border-bottom: 0.0625rem solid #d8d9db;
+    width: 100%;
+}
+
+/* .profile-container {
+} */
+
+.user-name-container {
+    padding: 16px 32px;
+    margin: auto;
+    max-width: 64rem;
+}
+
+.user-name {
+    color: #2d333f;
+    display: flex;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0;
+}
+
+.profile-index-container {
+    flex-direction: row;
+    margin: auto;
+    max-width: 64rem;
+    padding: 0 32px;
+    width: auto;
+}
+
+.profile-index-subcontainer {
+    margin: 32px 16px;
+    flex-basis: 100%;
+    min-height: 32rem
+}

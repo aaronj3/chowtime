@@ -21,11 +21,9 @@ function RestaurantProfile(){
         return null
     }
 
-    console.log(restaurant.reviews)
 
-    // let restaurantReviews = restaurant.reviews
-    // let restaurantPriceRange = restaurant.priceRange
-    // let restaurantCuisine = restaurant.cuisine
+
+
 
     return (
         <>
@@ -139,7 +137,7 @@ function RestaurantProfile(){
                     </section>
 
                     <section className="profile-section-container" id="reviews-container">
-                        <RestaurantReviews restaurantReviews={restaurant.reviews}/>
+                        <RestaurantReviews/>
                     </section>
                 </div>
 

@@ -12,6 +12,8 @@ class Api::ReviewsController < ApplicationController
 
         @reviews = reviews
         render :index
+
+        ##refactor
     end
 
     def show

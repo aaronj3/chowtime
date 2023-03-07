@@ -49,7 +49,7 @@ function ProfileButton({ user }) {
     {showMenu && (
         <div className="profile-dropdown-container">
             <span>Hello, {user.firstName}!</span>
-            <Link to="" className="link-container">My Profile</Link>
+            <Link to="/user" className="link-container">My Profile</Link>
             <Link to="" className="link-container">My Dining History</Link>
             <Link to="" className="link-container">My Saved Restaurants</Link>
             <button onClick={logout}>Sign Out</button>

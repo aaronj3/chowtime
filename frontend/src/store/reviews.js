@@ -1,4 +1,5 @@
 import csrfFetch from './csrf';
+import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT } from './restaurants';
 
 export const RECEIVE_REVIEWS = "reviews/receive"
 export const RECEIVE_REVIEW = "review/receive"
@@ -12,10 +13,10 @@ const receiveReviews = (payload) => (
     }
 );
 
-const receiveReview = (payload) => (
+const receiveReview = (review) => (
     {
         type: RECEIVE_REVIEW,
-        payload
+        review
     }
 );
 
@@ -40,13 +41,6 @@ export const getReview = (reviewId) => (state) => (
     state.reviews ? state.reviews[reviewId] : null
 )
 
-export const fetchReviews = (restaurant_id) => async dispatch => {
-    const response = await csrfFetch(`/api/reviews`)
-    if (response.ok) {
-        const reviews = await response.json()
-        dispatch(receiveReviews(reviews))
-    }
-}
 
 export const fetchReview = (review_id) => async dispatch => {
     const response = await csrfFetch(`/api/reviews/${review_id}`)
@@ -91,8 +85,8 @@ export const deleteReview = (reviewId) => async dispatch => {
 
 export default function reviewReducer(oldState = {}, action) {
     switch (action.type) {
-        case RECEIVE_REVIEWS:
-            return action.payload.reviews
+        case RECEIVE_RESTAURANT:
+            return action.reviews
         case RECEIVE_REVIEW:
             return {...oldState, [action.review.id] : action.review}
         case REMOVE_REVIEW:

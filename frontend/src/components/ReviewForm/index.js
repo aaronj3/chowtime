@@ -13,8 +13,9 @@ function ReviewForm() {
     const [body, setBody] = useState("");
     const [overallRating, setOverallRating] = useState();
     const [foodRating, setFoodRating] = useState();
-    const [serviceRating, setServiceRating] = useState(3);
-    const [ambienceRating, setAmbienceRating] = useState(4);
+    const [serviceRating, setServiceRating] = useState();
+    const [ambienceRating, setAmbienceRating] = useState();
+    const [errors, setErrors] = useState([]);
 
 
     const handleOverallRatingChange = (e) => {
@@ -33,24 +34,34 @@ function ReviewForm() {
         setAmbienceRating(e.target.value)
     }
 
+
+
     const handleSubmit = (e) => {
-        console.log("hello")
-        let newReview = {
-            author_id: sessionUser.id,
-            restaurant_id: restaurantId,
-            overall: overallRating,
-            food: foodRating,
-            service: serviceRating,
-            ambience: ambienceRating,
-            body: body
+        e.preventDefault();
+        if (!body || !overallRating || !foodRating || !serviceRating || !ambienceRating) {
+            setErrors(["Must fill out all fields"]);
+            console.log("is this working")
+        } else {
+            let newReview = {
+                author_id: sessionUser.id,
+                restaurant_id: restaurantId,
+                overall: overallRating,
+                food: foodRating,
+                service: serviceRating,
+                ambience: ambienceRating,
+                body: body
+            }
+            dispatch(createReview(newReview))
         }
-        dispatch(createReview(newReview))
     }
 
 
     return (
         <div>
             <form onSubmit={(handleSubmit)}>
+                <ul>
+                    {errors.map(error => <li key={error} className="error-messages">{error}</li>)}
+                </ul>
                 <label htmlFor="overall-rating">Overall</label>
                 <div className="overall-rating">
                     <input type="radio" name="overall-rating" value="1" onChange={handleOverallRatingChange}></input>

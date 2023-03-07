@@ -1,7 +1,6 @@
 import "./RestaurantReview.css"
 
 function RestaurantReview({review}){
-    console.log(review)
 
     return (
         <li className="review-container">

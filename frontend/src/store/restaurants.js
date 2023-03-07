@@ -7,10 +7,11 @@ const receiveRestaurants = (payload) => (
         payload
     });
 
-const receiveRestaurant = (restaurant) => (
+const receiveRestaurant = (payload) => (
     {
         type: RECEIVE_RESTAURANT,
-        restaurant
+        restaurant: payload.restaurant,
+        reviews: payload.reviews
     });
 
 export const getRestaurants = (state) => (

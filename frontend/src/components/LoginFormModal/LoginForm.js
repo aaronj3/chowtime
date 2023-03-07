@@ -18,7 +18,6 @@ function LoginForm({ setSignupFormShow, setLoginFormShow }) {
     setErrors([]);
     return dispatch(sessionActions.login({ email, password }))
         .catch(async (res) => {
-            console.log("YOSDFSDF")
         let data;
         try {
             // .clone() essentially allows you to read the response body twice
@@ -41,7 +40,7 @@ function LoginForm({ setSignupFormShow, setLoginFormShow }) {
         <>
         <form onSubmit={handleSubmit}>
             <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
+                {errors.map(error => <li key={error} className="error-messages">{error}</li>)}
             </ul>
             <div className="form-container">
                 <div className="form-body-container" >

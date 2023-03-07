@@ -4,20 +4,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./RestaurantReviews.css"
 import ReviewForm from "../ReviewForm";
 import RestaurantReview from "../RestaurantReview";
-import { getReviews, fetchReviews } from "../../store/reviews";
+import { getReviews } from "../../store/reviews";
 
-
-function RestaurantReviews({restaurantReviews}) {
+// refactor
+function RestaurantReviews() {
     const dispatch = useDispatch();
-    const reviews = useSelector(getReviews);
+    const reviews = useSelector(state => Object.values(state.reviews));
     const {restaurantId} = useParams();
 
-    useEffect(()=>{
-        dispatch(fetchReviews(restaurantId))
-    }, [dispatch, reviews])
+    // useEffect(()=>{
+    //     dispatch(fetchReviews(restaurantId))
+    // }, [dispatch, reviews])
 
 
-    if (!restaurantReviews) {
+    if (!reviews) {
         return null
     }
 
@@ -26,7 +26,7 @@ function RestaurantReviews({restaurantReviews}) {
             <header className="profile-section-container">
                 <header className="section-header">
                     <div className="review-header">
-                        <h2 className="header-text">What {restaurantReviews.length} people are saying</h2>
+                        <h2 className="header-text">What {reviews.length} people are saying</h2>
                     </div>
                 </header>
 
@@ -107,7 +107,7 @@ function RestaurantReviews({restaurantReviews}) {
                     <br></br>
 
                     <ol className="reviews-list" id="restProfileReviewsContent">
-                        {restaurantReviews.map(review=><RestaurantReview key={review.id} review={review}/>)}
+                        {reviews.map(review=><RestaurantReview key={review.id} review={review}/>)}
                     </ol>
                 </article>
             </section>
