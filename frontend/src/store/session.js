@@ -61,6 +61,8 @@ export const signup = ({first_name, last_name, email, password}) => async dispat
             password
         })
     });
+
+    console.log(response.ok, "This is checking")
     const data = await response.json();
     storeCurrentUser(data.user);
     dispatch(setCurrentUser(data.user));

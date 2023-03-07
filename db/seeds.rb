@@ -72,7 +72,7 @@ ApplicationRecord.transaction do
 
 
     Restaurant.create!(
-      name: "Cafe Aaltro Paradiso",
+      name: "Cafe Altro Paradiso",
       description: "Café Altro Paradiso offers an all-day Italian-inspired menu. Situated on a sunny corner in West Soho, the expansive windows reflect the light wood and marble throughout the dining room and bar, inviting guests to order a bottle of wine and linger in the space.",
       price_range: "$$$$",
       cuisine: "Italian" ,

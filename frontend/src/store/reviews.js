@@ -2,6 +2,7 @@ import csrfFetch from './csrf';
 
 export const RECEIVE_REVIEWS = "reviews/receive"
 export const RECEIVE_REVIEW = "review/receive"
+export const REMOVE_REVIEW = "review/remove"
 export const CLEAR_REVIEWS = "reviews/clear"
 
 const receiveReviews = (payload) => (
@@ -14,6 +15,13 @@ const receiveReviews = (payload) => (
 const receiveReview = (payload) => (
     {
         type: RECEIVE_REVIEW,
+        payload
+    }
+);
+
+const removeReview = (payload) => (
+    {
+        type: REMOVE_REVIEW,
         payload
     }
 );
@@ -48,13 +56,49 @@ export const fetchReview = (review_id) => async dispatch => {
     }
 }
 
+export const createReview = (review) => async dispatch => {
+    const response = await csrfFetch(`/api/reviews`, {
+        method: "POST",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(review)
+    })
+    if (response.ok) {
+        const review = await response.json()
+        dispatch(receiveReview(review))
+    }
+}
+
+export const updateReview = (review) => async dispatch => {
+    const response = await csrfFetch(`/api/reviews/${review.id}`, {
+        method: "PATCH",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(review)
+    })
+    if (response.ok) {
+        const review = await response.json()
+        dispatch(receiveReview(review))
+    }
+}
+
+export const deleteReview = (reviewId) => async dispatch => {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
+        method: "DELETE"
+    });
+    if (response.ok) {
+        dispatch(removeReview(reviewId))
+    }
+}
+
 export default function reviewReducer(oldState = {}, action) {
     switch (action.type) {
         case RECEIVE_REVIEWS:
             return action.payload.reviews
         case RECEIVE_REVIEW:
-            let newState = {...oldState}
             return {...oldState, [action.review.id] : action.review}
+        case REMOVE_REVIEW:
+            let newState = {...oldState}
+            delete newState[action.payload.reviewId]
+            return newState
         case CLEAR_REVIEWS:
             return {};
         default:

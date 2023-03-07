@@ -1,10 +1,21 @@
-import { useEffect } from "react";
+import { useState , useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
 import "./RestaurantReviews.css"
+import ReviewForm from "../ReviewForm";
 import RestaurantReview from "../RestaurantReview";
+import { getReviews, fetchReviews } from "../../store/reviews";
+
 
 function RestaurantReviews({restaurantReviews}) {
+    const dispatch = useDispatch();
+    const reviews = useSelector(getReviews);
+    const {restaurantId} = useParams();
+
+    useEffect(()=>{
+        dispatch(fetchReviews(restaurantId))
+    }, [dispatch, reviews])
+
 
     if (!restaurantReviews) {
         return null
@@ -88,6 +99,12 @@ function RestaurantReviews({restaurantReviews}) {
                             </meter>
                         </li>
                     </ol>
+
+                    <br></br>
+
+                    <ReviewForm/>
+
+                    <br></br>
 
                     <ol className="reviews-list" id="restProfileReviewsContent">
                         {restaurantReviews.map(review=><RestaurantReview key={review.id} review={review}/>)}

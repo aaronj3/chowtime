@@ -117,7 +117,7 @@ function RestaurantProfile(){
 
                     <section className="profile-section-container">
                         <header className="section-header">
-                            <div className="popular-dishes-header"><h2 className="header-text">Popular Dishes</h2></div>
+                            <div className="popular-dishes-header"><h2 id="popular-dishes" className="header-text">Popular Dishes</h2></div>
                         </header>
                         <div className="popular-dishes-cards">Insert popular dishes cards here</div>
                     </section>

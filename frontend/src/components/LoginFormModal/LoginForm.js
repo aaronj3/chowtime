@@ -18,6 +18,7 @@ function LoginForm({ setSignupFormShow, setLoginFormShow }) {
     setErrors([]);
     return dispatch(sessionActions.login({ email, password }))
         .catch(async (res) => {
+            console.log("YOSDFSDF")
         let data;
         try {
             // .clone() essentially allows you to read the response body twice

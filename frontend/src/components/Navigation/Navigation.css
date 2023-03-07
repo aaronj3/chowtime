@@ -9,7 +9,8 @@
 }
 
 .profile-button{
-    position: absolute;
+    display: inline-block;
+    height: 50px;
 }
 
 .nav-container {
@@ -98,4 +99,93 @@
     border-color: black;
     border-radius: .1875rem;
     border: 0.5px solid
+}
+
+.profile-button-container {
+    align-items: center;
+    background: #f1f2f4;
+    border: 0.0625rem solid #d8d9db;
+    border-radius: 50%;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+}
+
+.profile-button {
+    background: none;
+    border: none;
+}
+
+.profile-button-container > span {
+    display: inline-block;
+    font-size: 0;
+    height: 1.5rem;
+    line-height: 1;
+    min-width: 1.5rem;
+    width: 1.5rem;
+}
+
+.profile-dropdown-container {
+    margin-top: 12px;
+    padding-bottom: 8px;
+    width: 19.75rem;
+    background-color: #fff;
+    border-radius: 0.1875rem;
+    box-shadow: 0 0 0 0.0625rem #0000001a;
+    display: flex;
+    flex-direction: column;
+    max-height: 70rem;
+    right: 0;
+    top: 100%;
+    width: 9.375rem;
+    z-index: 900;
+    position: absolute;
+}
+
+.sessionLinks-container {
+    position: relative;
+}
+
+.profile-dropdown-container::before{
+    background: #0000;
+    border-color: #fff #0000 #0000 #fff;
+    border-style: solid;
+    border-width: 0.375rem;
+    box-shadow: -0.0625rem -0.0625rem 0 0 #00000026;
+    content: "";
+    display: block;
+    height: 0;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    right: calc(16px - 0.125rem);
+    top: -0.375rem;
+    transform: rotate(45deg);
+    width: 0;
+}
+
+.profile-dropdown-container > span {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 16px 8px;
+}
+
+.link-container{
+    color: #2d333f;
+    font-size: 16px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.profile-dropdown-container > button {
+    text-align: left;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 8px 16px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    color: #A93233
 }
