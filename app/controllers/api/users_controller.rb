@@ -11,10 +11,9 @@ class Api::UsersController < ApplicationController
     end
   end
 
-#   def show
-#     @user = User.find
-# ##refactor
-#   end
+  def show
+    @user = User.find
+  end
 
   private
 

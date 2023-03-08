@@ -22,9 +22,6 @@ function RestaurantProfile(){
     }
 
 
-
-
-
     return (
         <>
             <div className="restaurant-profile-main-container">

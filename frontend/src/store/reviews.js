@@ -1,5 +1,6 @@
 import csrfFetch from './csrf';
 import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT } from './restaurants';
+import { RECEIVE_CURRENT_USER_REVIEWS } from './session';
 
 export const RECEIVE_REVIEWS = "reviews/receive"
 export const RECEIVE_REVIEW = "review/receive"
@@ -87,6 +88,8 @@ export default function reviewReducer(oldState = {}, action) {
     switch (action.type) {
         case RECEIVE_RESTAURANT:
             return action.reviews
+        case RECEIVE_CURRENT_USER_REVIEWS:
+            return action.payload.reviews
         case RECEIVE_REVIEW:
             return {...oldState, [action.review.id] : action.review}
         case REMOVE_REVIEW:

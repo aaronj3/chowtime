@@ -2,6 +2,7 @@ import "./UserProfile.css"
 import { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { fetchCurrentUserReviews } from "../../store/session";
 
 
 function UserProfile() {
@@ -9,11 +10,9 @@ function UserProfile() {
     const sessionUser = useSelector(state => state.session.user)
 
     useEffect(()=> {
-        // dispatch get user data
+        dispatch(fetchCurrentUserReviews())
     }
-    , [ dispatch, sessionUser])
-
-
+    , [ dispatch, sessionUser ])
 
     return (
         <>

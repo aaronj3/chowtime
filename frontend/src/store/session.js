@@ -1,7 +1,8 @@
 import csrfFetch from './csrf';
 
-const SET_CURRENT_USER = 'session/setCurrentUser';
-const REMOVE_CURRENT_USER = 'session/removeCurrentUser';
+export const SET_CURRENT_USER = 'session/setCurrentUser';
+export const REMOVE_CURRENT_USER = 'session/removeCurrentUser';
+export const RECEIVE_CURRENT_USER_REVIEWS = 'session/getCurrentUserReviews';
 
 //actions
 
@@ -18,6 +19,13 @@ const removeCurrentUser = () => (
     }
 );
 
+const getCurrentUserReviews = (payload) => (
+    {
+        type: RECEIVE_CURRENT_USER_REVIEWS,
+        payload
+    }
+);
+
 const storeCSRFToken = response => {
     const csrfToken = response.headers.get("X-CSRF-Token");
     if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
@@ -31,6 +39,12 @@ const storeCurrentUser = user => {
 
 //THUNK action creators
 
+export const fetchCurrentUserReviews = () => async dispatch => {
+    const response = await csrfFetch("/api/session")
+    const data = await response.json();
+    dispatch(getCurrentUserReviews(data))
+}
+
 export const login = ({ email, password }) => async dispatch => {
     const response = await csrfFetch("/api/session", {
         method: "POST",
@@ -41,6 +55,7 @@ export const login = ({ email, password }) => async dispatch => {
     dispatch(setCurrentUser(data.user));
     return response;
 };
+
 
 export const restoreSession = () => async dispatch => {
     const response = await csrfFetch("/api/session");

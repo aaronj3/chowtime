@@ -15,11 +15,11 @@
 #
 class Review < ApplicationRecord
     belongs_to :author,
-        foreign_key: 'author_id',
-        class_name: 'User'
+        foreign_key: :author_id,
+        class_name: :User
 
     belongs_to :restaurant,
-        foreign_key: 'restaurant_id',
-        class_name: 'Restaurant'
+        foreign_key: :restaurant_id,
+        class_name: :Restaurant
 
 end
