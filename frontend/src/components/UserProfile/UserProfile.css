@@ -5,6 +5,7 @@
 }
 
 /* .profile-container {
+
 } */
 
 .user-name-container {
@@ -28,10 +29,24 @@
     max-width: 64rem;
     padding: 0 32px;
     width: auto;
+    color: #2d333f;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .profile-index-subcontainer {
     margin: 32px 16px;
     flex-basis: 100%;
     min-height: 32rem
+}
+
+.content-container {
+    background: #fff;
+    border-bottom: 0.0625rem solid #d8d9db;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+
 }

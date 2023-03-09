@@ -1,4 +1,5 @@
 import "./RestaurantReview.css"
+import ReviewButton from "../ReviewButtons";
 
 function RestaurantReview({review}){
 
@@ -9,6 +10,7 @@ function RestaurantReview({review}){
                 <p className="reviewer-detail">Reviewer name</p>
                 <p className="reviewer-detail">Reviewer geography</p>
                 <div className="reviewer-detail"># of reviews by reviewer</div>
+                <ReviewButton review={review}/>
             </section>
             <section className="review-body-container">
                 <section>

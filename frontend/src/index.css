@@ -55,6 +55,7 @@ table {
     max-width: 100rem;
     flex-direction: column;
     width: 100%;
+    background-color: #f7f7f7;
 }
 
 @font-face {

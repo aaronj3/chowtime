@@ -55,10 +55,10 @@
 .tab-container {
     background: #fff;
     padding-top: 16px;
-    position: sticky;
+    /* position: sticky; */
     top: -0.0625rem;
     transition: all .15s ease-in-out;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .navi-tabs {

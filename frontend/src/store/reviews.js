@@ -94,7 +94,7 @@ export default function reviewReducer(oldState = {}, action) {
             return {...oldState, [action.review.id] : action.review}
         case REMOVE_REVIEW:
             let newState = {...oldState}
-            delete newState[action.payload.reviewId]
+            delete newState[action.payload]
             return newState
         case CLEAR_REVIEWS:
             return {};
