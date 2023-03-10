@@ -14,9 +14,10 @@ function RestaurantIndexItem({restaurant}) {
     return (
         <Link key={restaurant.id} to={`/restaurants/${restaurant.id}`}>
             <div>
-                {/* <img src={restaurant.photos[1].url} width="300" height="300"/> */}
+                <img src={restaurant.photos[1].url} width="300" height="300"/>
+
                 <h3>{restaurant.name}</h3>
-                <p>{restaurant.address}</p>
+                {/* <p>{restaurant.address}</p> */}
             </div>
         </Link>
     )
