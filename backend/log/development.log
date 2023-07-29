@@ -1,0 +1,61 @@
+Started GET "/" for ::1 at 2023-07-29 16:33:20 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 581)
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 4454)
+
+
+Started GET "/" for ::1 at 2023-07-29 16:34:12 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.6ms | Allocations: 278)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 932)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-29 16:44:07 +0900
+Started GET "/api/session" for 127.0.0.1 at 2023-07-29 16:44:07 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4931)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-07-29 16:44:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/restaurants"):
+  
+Started GET "/" for ::1 at 2023-07-29 16:44:36 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 285)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1930)
+
+
+Started GET "/" for ::1 at 2023-07-29 16:44:38 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aaronjung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 278)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 919)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-07-29 16:44:50 +0900
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-07-29 16:44:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/restaurants"):
+  
+Started GET "/api/session" for 127.0.0.1 at 2023-07-29 16:49:51 +0900
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 264)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-07-29 16:49:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/api/restaurants"):
+  
