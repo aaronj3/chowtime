@@ -2,7 +2,7 @@ import { useState , useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
 import "./RestaurantReviews.css"
-import ReviewForm from "../ReviewForm";
+import ReviewFormModal from "../ReviewFormModal";
 import RestaurantReview from "../RestaurantReview";
 import { getReviews } from "../../store/reviews";
 
@@ -29,11 +29,13 @@ function RestaurantReviews() {
                         <h2 className="header-text">What {reviews.length} people are saying</h2>
                     </div>
                 </header>
-
             </header>
+
+<ReviewFormModal/>
+
             <section className="reviews-summary">
-                <h3 className="">Overall ratings and reviews</h3>
                 <article className="reviews-summary-ratings">
+                {/* <h3 className="">Overall ratings and reviews</h3>
                     <p>Reviews can only be made by diners who have eaten at this restaurant</p>
                     <section className="reviews-stars-and-text">
                         <div className="stars">
@@ -102,9 +104,7 @@ function RestaurantReviews() {
 
                     <br></br>
 
-                    <ReviewForm/>
-
-                    <br></br>
+                    <br></br> */}
 
                     <ol className="reviews-list" id="restProfileReviewsContent">
                         {reviews.map(review=><RestaurantReview key={review.id} review={review}/>)}
@@ -113,11 +113,6 @@ function RestaurantReviews() {
             </section>
 
         </>
-
-
-
-
-
         )
 }
 

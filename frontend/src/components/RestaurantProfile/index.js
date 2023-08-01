@@ -137,7 +137,7 @@ function RestaurantProfile(){
 
                     <section className="profile-section-container" id="reviews-container">
                         <RestaurantReviews/>
-                        <ReviewFormModal/>
+
                     </section>
                 </div>
 
