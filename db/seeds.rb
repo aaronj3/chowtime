@@ -25,9 +25,7 @@ require "open-uri"
 
 
     puts "Creating users..."
-    puts "Creating restaurants..."
-    puts "Creating reviews..."
-    # Create one user with an easy to remember username, email, and password:
+
 
     User.create!(
       first_name: 'Demo',
@@ -72,6 +70,10 @@ require "open-uri"
     )
 
 
+    # Create one user with an easy to remember username, email, and password:
+
+    puts "Creating restaurants..."
+
     rest1 = Restaurant.create!(
       name: "Cafe Altro Paradiso",
       description: "Café Altro Paradiso offers an all-day Italian-inspired menu. Situated on a sunny corner in West Soho, the expansive windows reflect the light wood and marble throughout the dining room and bar, inviting guests to order a bottle of wine and linger in the space.",
@@ -82,23 +84,23 @@ require "open-uri"
       menu: "Spaghetti Pomodoro, Rigatoni Alla Gricia, Wagyu Burger"
     )
 
-    file1a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro_thumbnail.jpeg")
-    rest1.photos.attach(io: file1a, filename: 'altro_thumbnail.jpeg')
+    # file1a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro_thumbnail.jpeg")
+    # rest1.photos.attach(io: file1a, filename: 'altro_thumbnail.jpeg')
 
-    file1b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro_header.jpeg")
-    rest1.photos.attach(io: file1b, filename: 'altro_header.jpeg')
+    # file1b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro_header.jpeg")
+    # rest1.photos.attach(io: file1b, filename: 'altro_header.jpeg')
 
-    file1c = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro1.jpeg")
-    rest1.photos.attach(io: file1c, filename: 'altro1.jpeg')
+    # file1c = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro1.jpeg")
+    # rest1.photos.attach(io: file1c, filename: 'altro1.jpeg')
 
-    file1d = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro2.jpeg")
-    rest1.photos.attach(io: file1d, filename: 'altro2.jpeg')
+    # file1d = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro2.jpeg")
+    # rest1.photos.attach(io: file1d, filename: 'altro2.jpeg')
 
-    file1e = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro3.jpeg")
-    rest1.photos.attach(io: file1e, filename: 'altro3.jpeg')
+    # file1e = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro3.jpeg")
+    # rest1.photos.attach(io: file1e, filename: 'altro3.jpeg')
 
-    file1f = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro4.jpeg")
-    rest1.photos.attach(io: file1f, filename: 'altro4.jpeg')
+    # file1f = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/aaltroparadiso/altro4.jpeg")
+    # rest1.photos.attach(io: file1f, filename: 'altro4.jpeg')
 
 
     rest2 = Restaurant.create!(
@@ -114,20 +116,20 @@ require "open-uri"
       menu: "All you can eat"
     )
 
-    file2a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill_thumbnail.jpeg")
-    rest2.photos.attach(io: file2a, filename: 'mgrill_thumbnail.jpeg')
+    # file2a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill_thumbnail.jpeg")
+    # rest2.photos.attach(io: file2a, filename: 'mgrill_thumbnail.jpeg')
 
-    file2b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill_header.jpeg")
-    rest2.photos.attach(io: file2b, filename: 'mgrill_header.jpeg')
+    # file2b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill_header.jpeg")
+    # rest2.photos.attach(io: file2b, filename: 'mgrill_header.jpeg')
 
-    file2c = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill1.jpeg")
-    rest2.photos.attach(io: file2c, filename: 'mgrill1.jpeg')
+    # file2c = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill1.jpeg")
+    # rest2.photos.attach(io: file2c, filename: 'mgrill1.jpeg')
 
-    file2d = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill2.jpeg")
-    rest2.photos.attach(io: file2d, filename: 'mgrill2.jpeg')
+    # file2d = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill2.jpeg")
+    # rest2.photos.attach(io: file2d, filename: 'mgrill2.jpeg')
 
-    file2e = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill3.jpeg")
-    rest2.photos.attach(io: file2e, filename: 'mgrill3.jpeg')
+    # file2e = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/mgrill/mgrill3.jpeg")
+    # rest2.photos.attach(io: file2e, filename: 'mgrill3.jpeg')
 
 
     rest3 = Restaurant.create!(
@@ -140,17 +142,17 @@ require "open-uri"
       menu: "Galbijjim, Kaesung Bossam Kimchi, Yukhoe Bibimbap"
     )
 
-    file3a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan_thumbnail.jpeg")
-    rest3.photos.attach(io: file3a, filename: 'yongsusan_thumbnail.jpeg')
+    # file3a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan_thumbnail.jpeg")
+    # rest3.photos.attach(io: file3a, filename: 'yongsusan_thumbnail.jpeg')
 
-    file3b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan_header.jpeg")
-    rest3.photos.attach(io: file3b, filename: 'yongsusan_header.jpeg')
+    # file3b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan_header.jpeg")
+    # rest3.photos.attach(io: file3b, filename: 'yongsusan_header.jpeg')
 
-    file3c = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan1.jpeg")
-    rest3.photos.attach(io: file3c, filename: 'yongsusan1.jpeg')
+    # file3c = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan1.jpeg")
+    # rest3.photos.attach(io: file3c, filename: 'yongsusan1.jpeg')
 
-    file3d = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan2.jpeg")
-    rest3.photos.attach(io: file3d, filename: 'yongsusan2.jpeg')
+    # file3d = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/yongsusan/yongsusan2.jpeg")
+    # rest3.photos.attach(io: file3d, filename: 'yongsusan2.jpeg')
 
     rest4 = Restaurant.create!(
       name: "Mo-Mo-Paradise",
@@ -164,11 +166,11 @@ require "open-uri"
       menu: "Shabu-Shabu, Sukiyaki, Kimchi, Tonkotsu"
     )
 
-    file4a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/momoparadise/momoparadise_thumbnail.jpeg")
-    rest4.photos.attach(io: file4a, filename: 'momoparadise_thumbnail.jpeg')
+    # file4a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/momoparadise/momoparadise_thumbnail.jpeg")
+    # rest4.photos.attach(io: file4a, filename: 'momoparadise_thumbnail.jpeg')
 
-    file4b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/momoparadise/momoparadise_header.jpeg")
-    rest4.photos.attach(io: file4b, filename: 'momoparadise_header.jpeg')
+    # file4b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/momoparadise/momoparadise_header.jpeg")
+    # rest4.photos.attach(io: file4b, filename: 'momoparadise_header.jpeg')
 
 
 
@@ -185,11 +187,11 @@ require "open-uri"
       menu: "Lasagna, Tagliatelle & Chianti Short Ribs, Linguini Pesto Chicken"
     )
 
-    file5a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gaetanos/gaetanos_thumbnail.jpeg")
-    rest5.photos.attach(io: file5a, filename: 'gaetanos_thumbnail.jpeg')
+    # file5a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gaetanos/gaetanos_thumbnail.jpeg")
+    # rest5.photos.attach(io: file5a, filename: 'gaetanos_thumbnail.jpeg')
 
-    file5b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gaetanos/gaetanos_header.jpeg")
-    rest5.photos.attach(io: file5b, filename: 'gaetanos_header.jpeg')
+    # file5b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gaetanos/gaetanos_header.jpeg")
+    # rest5.photos.attach(io: file5b, filename: 'gaetanos_header.jpeg')
 
     rest6 = Restaurant.create!(
       name: "Tamaen Japanese BBQ",
@@ -202,11 +204,11 @@ require "open-uri"
       menu: "Ball Tip Beef Tartar with Truffle, A5 Wagyu Ribeye"
     )
 
-    file6a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/tamaen/tamaen_thumbnail.jpeg")
-    rest6.photos.attach(io: file6a, filename: 'tamaen_thumbnail.jpeg')
+    # file6a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/tamaen/tamaen_thumbnail.jpeg")
+    # rest6.photos.attach(io: file6a, filename: 'tamaen_thumbnail.jpeg')
 
-    file6b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/tamaen/tamaen_header.jpeg")
-    rest6.photos.attach(io: file6b, filename: 'tamaen_header.jpeg')
+    # file6b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/tamaen/tamaen_header.jpeg")
+    # rest6.photos.attach(io: file6b, filename: 'tamaen_header.jpeg')
 
 
     rest7 = Restaurant.create!(
@@ -223,11 +225,11 @@ require "open-uri"
       menu: "Raw Oyster, Uni & Kobe Beef Sashimi, Assorted Beef Sashimi"
     )
 
-    file7a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/izakaya_hachi/izakaya_hachi_thumbnail.jpeg")
-    rest7.photos.attach(io: file7a, filename: 'izakaya_hachi_thumbnail.jpeg')
+    # file7a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/izakaya_hachi/izakaya_hachi_thumbnail.jpeg")
+    # rest7.photos.attach(io: file7a, filename: 'izakaya_hachi_thumbnail.jpeg')
 
-    file7b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/izakaya_hachi/izakaya_hachi_header.jpeg")
-    rest7.photos.attach(io: file7b, filename: 'izakaya_hachi_header.jpeg')
+    # file7b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/izakaya_hachi/izakaya_hachi_header.jpeg")
+    # rest7.photos.attach(io: file7b, filename: 'izakaya_hachi_header.jpeg')
 
     rest8 = Restaurant.create!(
       name: "Girl & the Goat L.A.",
@@ -241,11 +243,11 @@ require "open-uri"
       menu: "Pork Belly Salad, Fritters, Shrimp Salad, Mango Sticky Rice"
     )
 
-    file8a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/girlgoat/girlgoat_thumbnail.jpeg")
-    rest8.photos.attach(io: file8a, filename: 'girlgoat_thumbnail.jpeg')
+    # file8a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/girlgoat/girlgoat_thumbnail.jpeg")
+    # rest8.photos.attach(io: file8a, filename: 'girlgoat_thumbnail.jpeg')
 
-    file8b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/girlgoat/girlgoat_header.jpeg")
-    rest8.photos.attach(io: file8b, filename: 'girlgoat_header.jpeg')
+    # file8b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/girlgoat/girlgoat_header.jpeg")
+    # rest8.photos.attach(io: file8b, filename: 'girlgoat_header.jpeg')
 
     rest9 = Restaurant.create!(
       name: "Love and Salt",
@@ -258,11 +260,11 @@ require "open-uri"
       menu: "Wood Oven Meatballs, Japanese Mushrooms, Shaved Fennel Salad"
     )
 
-    file9a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/lovesalt/lovesalt_thumbnail.jpeg")
-    rest9.photos.attach(io: file9a, filename: 'lovesalt_thumbnail.jpeg')
+    # file9a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/lovesalt/lovesalt_thumbnail.jpeg")
+    # rest9.photos.attach(io: file9a, filename: 'lovesalt_thumbnail.jpeg')
 
-    file9b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/lovesalt/lovesalt_header.jpeg")
-    rest9.photos.attach(io: file9b, filename: 'lovesalt_header.jpeg')
+    # file9b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/lovesalt/lovesalt_header.jpeg")
+    # rest9.photos.attach(io: file9b, filename: 'lovesalt_header.jpeg')
 
 
     rest10 = Restaurant.create!(
@@ -275,11 +277,11 @@ require "open-uri"
       menu: "Avocado on Toast, Fried Chicken and Waffles, Huevos Rancheros"
     )
 
-    file10a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/catalina_kitchen/catalina_kitchen_thumbnail.jpeg")
-    rest10.photos.attach(io: file10a, filename: 'catalina_kitchen_thumbnail.jpeg')
+    # file10a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/catalina_kitchen/catalina_kitchen_thumbnail.jpeg")
+    # rest10.photos.attach(io: file10a, filename: 'catalina_kitchen_thumbnail.jpeg')
 
-    file10b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/catalina_kitchen/catalina_kitchen_header.jpeg")
-    rest10.photos.attach(io: file10b, filename: 'catalina_kitchen_header.jpeg')
+    # file10b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/catalina_kitchen/catalina_kitchen_header.jpeg")
+    # rest10.photos.attach(io: file10b, filename: 'catalina_kitchen_header.jpeg')
 
     rest11 = Restaurant.create!(
       name: "Little Sister",
@@ -300,11 +302,11 @@ require "open-uri"
       menu: "Lemongrass Chicken, Papaya Salad, Octopus Salad"
     )
 
-    file11a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littlesister/littlesister_thumbnail.jpeg")
-    rest11.photos.attach(io: file11a, filename: 'littlesister_thumbnail.jpeg')
+    # file11a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littlesister/littlesister_thumbnail.jpeg")
+    # rest11.photos.attach(io: file11a, filename: 'littlesister_thumbnail.jpeg')
 
-    file11b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littlesister/littlesister_header.jpeg")
-    rest11.photos.attach(io: file11b, filename: 'littlesister_header.jpeg')
+    # file11b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littlesister/littlesister_header.jpeg")
+    # rest11.photos.attach(io: file11b, filename: 'littlesister_header.jpeg')
 
     rest12 = Restaurant.create!(
       name: "Bestia",
@@ -316,11 +318,11 @@ require "open-uri"
       menu: "Roasted Marrow Bone, Mussels, Slow Roasted Lamb Neck"
     )
 
-    file12a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bestia/bestia_thumbnail.jpeg")
-    rest12.photos.attach(io: file12a, filename: 'bestia_thumbnail.jpeg')
+    # file12a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bestia/bestia_thumbnail.jpeg")
+    # rest12.photos.attach(io: file12a, filename: 'bestia_thumbnail.jpeg')
 
-    file12b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bestia/bestia_header.jpeg")
-    rest12.photos.attach(io: file12b, filename: 'bestia_header.jpeg')
+    # file12b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bestia/bestia_header.jpeg")
+    # rest12.photos.attach(io: file12b, filename: 'bestia_header.jpeg')
 
     rest13 = Restaurant.create!(
       name: "Ospi",
@@ -332,11 +334,11 @@ require "open-uri"
       menu: "Caio e Pepe, Neapolitan Meatballs, Spicy Rigatoni "
     )
 
-    file13a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/ospi/ospi_thumbnail.jpeg")
-    rest13.photos.attach(io: file13a, filename: 'ospi_thumbnail.jpeg')
+    # file13a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/ospi/ospi_thumbnail.jpeg")
+    # rest13.photos.attach(io: file13a, filename: 'ospi_thumbnail.jpeg')
 
-    file13b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/ospi/ospi_header.jpeg")
-    rest13.photos.attach(io: file13b, filename: 'ospi_header.jpeg')
+    # file13b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/ospi/ospi_header.jpeg")
+    # rest13.photos.attach(io: file13b, filename: 'ospi_header.jpeg')
 
     rest14 = Restaurant.create!(
       name: "Frida Mexican Cuisine",
@@ -351,11 +353,11 @@ require "open-uri"
       menu: "Tacos De Rib Eye, Fajitas De Pollo, Ceviche"
     )
 
-    file14a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/frida/frida_thumbnail.jpeg")
-    rest14.photos.attach(io: file14a, filename: 'frida_thumbnail.jpeg')
+    # file14a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/frida/frida_thumbnail.jpeg")
+    # rest14.photos.attach(io: file14a, filename: 'frida_thumbnail.jpeg')
 
-    file14b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/frida/frida_header.jpeg")
-    rest14.photos.attach(io: file14b, filename: 'frida_header.jpeg')
+    # file14b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/frida/frida_header.jpeg")
+    # rest14.photos.attach(io: file14b, filename: 'frida_header.jpeg')
 
     rest15 = Restaurant.create!(
       name: "Gjelina",
@@ -370,11 +372,11 @@ require "open-uri"
       menu: "Mushroom Pizza, Lamb Sausage Pizza, Lamb Burger"
     )
 
-    file15a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gjelina/gjelina_thumbnail.jpeg")
-    rest15.photos.attach(io: file15a, filename: 'gjelina_thumbnail.jpeg')
+    # file15a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gjelina/gjelina_thumbnail.jpeg")
+    # rest15.photos.attach(io: file15a, filename: 'gjelina_thumbnail.jpeg')
 
-    file15b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gjelina/gjelina_header.jpeg")
-    rest15.photos.attach(io: file15b, filename: 'gjelina_header.jpeg')
+    # file15b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/gjelina/gjelina_header.jpeg")
+    # rest15.photos.attach(io: file15b, filename: 'gjelina_header.jpeg')
 
     rest16 = Restaurant.create!(
       name: "Marlou DTLA",
@@ -386,11 +388,11 @@ require "open-uri"
       menu: "Heirloom Tomato & Buratta, Meatballs, Hamachi Tiradito"
     )
 
-    file16a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/marlou/marlou_thumbnail.jpeg")
-    rest16.photos.attach(io: file16a, filename: 'marlou_thumbnail.jpeg')
+    # file16a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/marlou/marlou_thumbnail.jpeg")
+    # rest16.photos.attach(io: file16a, filename: 'marlou_thumbnail.jpeg')
 
-    file16b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/marlou/marlou_header.jpeg")
-    rest16.photos.attach(io: file16b, filename: 'marlou_header.jpeg')
+    # file16b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/marlou/marlou_header.jpeg")
+    # rest16.photos.attach(io: file16b, filename: 'marlou_header.jpeg')
 
     rest17 = Restaurant.create!(
       name: "Bacari - Silver Lake",
@@ -402,11 +404,11 @@ require "open-uri"
       menu: "Sea Bass, Shrimp Ceviche, Bacari Frieds"
     )
 
-    file17a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bacari/bacari_thumbnail.jpeg")
-    rest17.photos.attach(io: file17a, filename: 'bacari_thumbnail.jpeg')
+    # file17a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bacari/bacari_thumbnail.jpeg")
+    # rest17.photos.attach(io: file17a, filename: 'bacari_thumbnail.jpeg')
 
-    file17b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bacari/bacari_header.jpeg")
-    rest17.photos.attach(io: file17b, filename: 'bacari_header.jpeg')
+    # file17b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/bacari/bacari_header.jpeg")
+    # rest17.photos.attach(io: file17b, filename: 'bacari_header.jpeg')
 
     rest18 = Restaurant.create!(
       name: "Fogo de Chao - Los Angeles",
@@ -418,11 +420,11 @@ require "open-uri"
       menu: "Churrasco"
     )
 
-    file18a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/fogo/fogo_thumbnail.jpeg")
-    rest18.photos.attach(io: file18a, filename: 'fogo_thumbnail.jpeg')
+    # file18a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/fogo/fogo_thumbnail.jpeg")
+    # rest18.photos.attach(io: file18a, filename: 'fogo_thumbnail.jpeg')
 
-    file18b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/fogo/fogo_header.jpg")
-    rest18.photos.attach(io: file18b, filename: 'fogo_header.jpg')
+    # file18b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/fogo/fogo_header.jpg")
+    # rest18.photos.attach(io: file18b, filename: 'fogo_header.jpg')
 
     rest19 = Restaurant.create!(
       name: "Beauty & Essex - Los Angeles",
@@ -434,11 +436,11 @@ require "open-uri"
       menu: "Grilled Cheese, Over Braised Chicken Meatballs, Tomato Soup Dumplings"
     )
 
-    file19a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/beautyessex/beautyessex_thumbnail.jpeg")
-    rest19.photos.attach(io: file19a, filename: 'beautyessex_thumbnail.jpeg')
+    # file19a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/beautyessex/beautyessex_thumbnail.jpeg")
+    # rest19.photos.attach(io: file19a, filename: 'beautyessex_thumbnail.jpeg')
 
-    file19b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/beautyessex/beautyessex_header.jpeg")
-    rest19.photos.attach(io: file19b, filename: 'beautyessex_header.jpeg')
+    # file19b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/beautyessex/beautyessex_header.jpeg")
+    # rest19.photos.attach(io: file19b, filename: 'beautyessex_header.jpeg')
 
     rest20 = Restaurant.create!(
       name: "The Little Door",
@@ -450,12 +452,13 @@ require "open-uri"
       menu: "Couscous Royale, Oysters, Steak Tartare"
     )
 
-    file20a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littledoor/littledoor_thumbnail.jpg")
-    rest20.photos.attach(io: file20a, filename: 'littledoor_thumbnail.jpeg')
+    # file20a = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littledoor/littledoor_thumbnail.jpg")
+    # rest20.photos.attach(io: file20a, filename: 'littledoor_thumbnail.jpeg')
 
-    file20b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littledoor/littledoor_thumbnail.jpg")
-    rest20.photos.attach(io: file20b, filename: 'littledoor_thumbnail.jpeg')
+    # file20b = URI.open("https://chowtime-seeds.s3.us-west-1.amazonaws.com/assetsforChowtime/littledoor/littledoor_thumbnail.jpg")
+    # rest20.photos.attach(io: file20b, filename: 'littledoor_thumbnail.jpeg')
 
+    puts "Creating reviews..."
 
     Review.create!(
       author_id: 1,
@@ -515,6 +518,24 @@ require "open-uri"
       service: 5,
       ambience: 5,
       body: "Truly a great dining experience."
+    )
+
+    puts "Creating reservation..."
+
+    Reservation.create!(
+      user_id: 1,
+      restaurant_id: 1,
+      date: "2023-03-15",
+      time: "8:00",
+      party_size: "4"
+    )
+
+    Reservation.create!(
+      user_id: 2,
+      restaurant_id: 2,
+      date: "2023-04-23",
+      time: "5:00",
+      party_size: "2"
     )
 
     puts "Done!"

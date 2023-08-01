@@ -12,7 +12,7 @@
 #  updated_at    :datetime         not null
 #
 class Reservation < ApplicationRecord
-    validate :unique_reservation_for_date_and_time
+    # validate :unique_reservation_for_date_and_time
 
 
 
@@ -26,11 +26,11 @@ class Reservation < ApplicationRecord
 
     private
 
-    def unique_reservation_for_date_and_time
-        existing_reservation = Reservation.find_by(reservation_date: reservation_date, reservation_time: reservation_time)
+    # def unique_reservation_for_date_and_time
+    #     existing_reservation = Reservation.find_by(reservation_date: reservation_date, reservation_time: reservation_time)
 
-        if existing_reservation && (existing_reservation != self)
-        errors.add(:base, "This date and time is already reserved by another user.")
-        end
-    end
+    #     if existing_reservation && (existing_reservation != self)
+    #     errors.add(:base, "This date and time is already reserved by another user.")
+    #     end
+    # end
 end

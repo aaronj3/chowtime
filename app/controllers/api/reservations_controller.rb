@@ -13,7 +13,6 @@ class Api::ReservationsController < ApplicationController
     def show
         @reservation = Reservation.find(params[:id])
         render :show
-
     end
 
     def create
