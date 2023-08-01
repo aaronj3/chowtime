@@ -4,19 +4,18 @@ const partySizeOptions = Array.from({ length: 20 }, (_, index) => ({ value: inde
 
 
 
-function partySizeDropDown ({selectedPartySize, onChange}) {
+function PartySizeDropDown ({selectedPartySize, onChange}) {
 
     return (
         <>
-        <Select>
-            options={partySizeDropDown}
-            value={{ value: selectedPartySize, label: `${selectedPartySize}`}}
-            onChange={onChange}
-            placeHolder ="Select party size"
-        </Select>
-
+        <Select
+        options={partySizeOptions}
+        value={{ value: selectedPartySize, label: `${selectedPartySize}`}}
+        onChange={onChange}
+        placeHolder ="Select party size"
+        />
         </>
     )
 }
 
-export default partySizeDropDown
+export default PartySizeDropDown

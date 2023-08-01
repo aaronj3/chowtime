@@ -1,8 +1,8 @@
 import { useState } from "react"
-import partySizeDropDown from "./partySizeDropDown"
+import PartySizeDropDown from "./PartySizeDropDown";
 
 function ReservationForm () {
-    const [selectedPartySize, setSelectedPartySize] = useState(null);
+    const [selectedPartySize, setSelectedPartySize] = useState(2);
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedTime, setSelectedTime] = useState('');
 
@@ -23,12 +23,10 @@ function ReservationForm () {
         <>
         <div>
             <h2>Make a reservation</h2>
-            <PartySizeDropdown selectedPartySize={selectedPartySize} onChange={handlePartySizeChange} />
+            <PartySizeDropDown selectedPartySize={selectedPartySize} onChange={handlePartySizeChange} />
 
 
             <button>Find a time</button>
-
-
         </div>
         </>
     )

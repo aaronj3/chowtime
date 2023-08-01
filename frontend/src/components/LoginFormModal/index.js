@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 function LoginFormModal({loginFormShow, setSignupFormShow, setLoginFormShow}) {
 
-
   return (
     <>
       <button className="nav-button" id="log-in-button" onClick={() => setLoginFormShow(true)}>Log In</button>

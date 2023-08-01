@@ -40,7 +40,6 @@ function ReviewForm() {
         e.preventDefault();
         if (!body || !overallRating || !foodRating || !serviceRating || !ambienceRating) {
             setErrors(["Must fill out all fields"]);
-            console.log("is this working")
         } else {
             let newReview = {
                 author_id: sessionUser.id,
@@ -64,38 +63,48 @@ function ReviewForm() {
                 </ul>
                 <label htmlFor="overall-rating">Overall</label>
                 <div className="overall-rating">
-                    <input type="radio" name="overall-rating" value="1" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="2" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="3" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="4" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="5" onChange={handleOverallRatingChange}></input>
+                    <select>
+                        <option value = "1" name="overall-rating"  onChange={handleOverallRatingChange}>1</option>
+                        <option value = "2" name="overall-rating"  onChange={handleOverallRatingChange}>2</option>
+                        <option value = "3" name="overall-rating"  onChange={handleOverallRatingChange}>3</option>
+                        <option value = "4" name="overall-rating"  onChange={handleOverallRatingChange}>4</option>
+                        <option value = "5" name="overall-rating"  onChange={handleOverallRatingChange}>5</option>
+                    </select>
+
                 </div>
 
                 <label htmlFor="food-rating">Food</label>
                 <div className="food-rating">
-                    <input type="radio" name="food-rating" value="1" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="2" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="3" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="4" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="5" onChange={handleFoodRatingChange}></input>
+                    <select>
+                        <option value = "1" name="food-rating" onChange={handleFoodRatingChange}>1</option>
+                        <option value = "2" name="food-rating" onChange={handleFoodRatingChange}>2</option>
+                        <option value = "3" name="food-rating" onChange={handleFoodRatingChange}>3</option>
+                        <option value = "4" name="food-rating" onChange={handleFoodRatingChange}>4</option>
+                        <option value = "5" name="food-rating" onChange={handleFoodRatingChange}>5</option>
+                    </select>
                 </div>
 
                 <label htmlFor="service-rating">Service</label>
                 <div className="service-rating">
-                    <input type="radio" name="service-rating" value="1" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="2" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="3" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="4" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="5" onChange={handleServiceRatingChange}></input>
+                    <select>
+                        <option value = "1" onChange={handleServiceRatingChange}>1</option>
+                        <option value = "2" onChange={handleServiceRatingChange}>2</option>
+                        <option value = "3" onChange={handleServiceRatingChange}>3</option>
+                        <option value = "4" onChange={handleServiceRatingChange}>4</option>
+                        <option value = "5" onChange={handleServiceRatingChange}>5</option>
+                    </select>
+
                 </div>
 
                 <label htmlFor="ambience-rating">Ambience</label>
                 <div className="ambience-rating">
-                    <input type="radio" name="ambience-rating" value="1" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="2" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="3" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="4" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="5" onChange={handleAmbienceRatingChange}></input>
+                    <select>
+                        <option value = "1" onChange={handleAmbienceRatingChange}>1</option>
+                        <option value = "2" onChange={handleAmbienceRatingChange}>2</option>
+                        <option value = "3" onChange={handleAmbienceRatingChange}>3</option>
+                        <option value = "4" onChange={handleAmbienceRatingChange}>4</option>
+                        <option value = "5" onChange={handleAmbienceRatingChange}>5</option>
+                    </select>
                 </div>
 
                 <label>Body

@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurant, getRestaurant } from "../../store/restaurants";
 import RestaurantReviews from "../RestaurantReviews";
-import ReservationForm from "../ReservationForm";
+import ReviewFormModal from "../ReviewFormModal";
 import "./RestaurantProfile.css"
 
 
@@ -53,7 +53,7 @@ function RestaurantProfile(){
                         </nav>
                     </section>
 
-                    <ReservationForm/>
+                    {/* <ReservationForm/> */}
 
                     <section>
                         <h1 className="restaurant-name">
@@ -137,6 +137,7 @@ function RestaurantProfile(){
 
                     <section className="profile-section-container" id="reviews-container">
                         <RestaurantReviews/>
+                        <ReviewFormModal/>
                     </section>
                 </div>
 
