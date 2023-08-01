@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurant, getRestaurant } from "../../store/restaurants";
 import RestaurantReviews from "../RestaurantReviews";
+import ReservationForm from "../ReservationForm";
 import "./RestaurantProfile.css"
 
 
@@ -25,7 +26,6 @@ function RestaurantProfile(){
     return (
         <>
             <div className="restaurant-profile-main-container">
-                {/* Restaurant Banner Component  */}
                 <div className="restaurant-profile-container-1">
                     <section className="tab-container">
                         <nav className="navi-tabs">
@@ -52,6 +52,8 @@ function RestaurantProfile(){
                             </ol>
                         </nav>
                     </section>
+
+                    <ReservationForm/>
 
                     <section>
                         <h1 className="restaurant-name">
