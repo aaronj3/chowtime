@@ -68,46 +68,50 @@ function ReviewForm() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center", marginBottom: "18px", marginTop: "24px"}} >
                 <label htmlFor="overall-rating">Overall</label>
                 <div className="overall-rating">
-                    <select>
-                        <option value = "1" name="overall-rating"  onChange={handleOverallRatingChange}>1</option>
-                        <option value = "2" name="overall-rating"  onChange={handleOverallRatingChange}>2</option>
-                        <option value = "3" name="overall-rating"  onChange={handleOverallRatingChange}>3</option>
-                        <option value = "4" name="overall-rating"  onChange={handleOverallRatingChange}>4</option>
-                        <option value = "5" name="overall-rating"  onChange={handleOverallRatingChange}>5</option>
+                    <select onChange={handleOverallRatingChange} value={overallRating}>
+                        <option value="none" disabled>--</option>
+                        <option value = "1" name="overall-rating">1</option>
+                        <option value = "2" name="overall-rating">2</option>
+                        <option value = "3" name="overall-rating">3</option>
+                        <option value = "4" name="overall-rating">4</option>
+                        <option value = "5" name="overall-rating">5</option>
                     </select>
                 </div>
 
                 <label htmlFor="food-rating">Food</label>
                 <div className="food-rating">
-                    <select>
-                        <option value = "1" name="food-rating" onChange={handleFoodRatingChange}>1</option>
-                        <option value = "2" name="food-rating" onChange={handleFoodRatingChange}>2</option>
-                        <option value = "3" name="food-rating" onChange={handleFoodRatingChange}>3</option>
-                        <option value = "4" name="food-rating" onChange={handleFoodRatingChange}>4</option>
-                        <option value = "5" name="food-rating" onChange={handleFoodRatingChange}>5</option>
+                    <select onChange={handleFoodRatingChange} value={foodRating}>
+                        <option value="none" disabled>--</option>
+                        <option value = "1" name="food-rating">1</option>
+                        <option value = "2" name="food-rating">2</option>
+                        <option value = "3" name="food-rating">3</option>
+                        <option value = "4" name="food-rating">4</option>
+                        <option value = "5" name="food-rating">5</option>
                     </select>
                 </div>
 
                 <label htmlFor="service-rating">Service</label>
                 <div className="service-rating">
-                    <select>
-                        <option value = "1" onChange={handleServiceRatingChange}>1</option>
-                        <option value = "2" onChange={handleServiceRatingChange}>2</option>
-                        <option value = "3" onChange={handleServiceRatingChange}>3</option>
-                        <option value = "4" onChange={handleServiceRatingChange}>4</option>
-                        <option value = "5" onChange={handleServiceRatingChange}>5</option>
+                    <select onChange={handleServiceRatingChange} value={serviceRating}>
+                        <option value="none" disabled>--</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
                     </select>
 
                 </div>
 
                 <label htmlFor="ambience-rating">Ambience</label>
                     <div className="ambience-rating">
-                        <select>
-                            <option value = "1" onChange={handleAmbienceRatingChange}>1</option>
-                            <option value = "2" onChange={handleAmbienceRatingChange}>2</option>
-                            <option value = "3" onChange={handleAmbienceRatingChange}>3</option>
-                            <option value = "4" onChange={handleAmbienceRatingChange}>4</option>
-                            <option value = "5" onChange={handleAmbienceRatingChange}>5</option>
+                        <select onChange={handleAmbienceRatingChange} value={ambienceRating}>
+                            <option value="none" disabled>--</option>
+                            <option value = "1">1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                            <option value = "4">4</option>
+                            <option value = "5">5</option>
                         </select>
                     </div>
                 </div>
@@ -117,7 +121,7 @@ function ReviewForm() {
                     <textarea type="textarea" style={{height: "100px", width: "100%", marginTop: "8px", verticalAlign: "top"}} value={body} onChange={(e) => {setBody(e.target.value)}} ></textarea>
                 </label>
 
-                <button className="modal-button" style={{marginTop: "36px"}}>Submit</button>
+                <button className="modal-button" style={{marginTop: "36px"}} type="submit">Submit</button>
             </form>
         </div>
         )
