@@ -49,53 +49,73 @@ function UpdateReviewForm({ review , setUpdateShowModal}) {
 
     return (
         <div>
+            <div>
+                <h2 style={{fontSize: "36px"}}>Leave a review</h2>
+            </div>
+
             <form onSubmit={(handleUpdateSubmit)}>
                 <ul>
                     {errors.map(error => <li key={error} className="error-messages">{error}</li>)}
                 </ul>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center", marginBottom: "18px", marginTop: "24px"}} >
                 <label htmlFor="overall-rating">Overall</label>
                 <div className="overall-rating">
-                    <input type="radio" name="overall-rating" value="1" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="2" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="3" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="4" onChange={handleOverallRatingChange}></input>
-                    <input type="radio" name="overall-rating" value="5" onChange={handleOverallRatingChange}></input>
+                    <select onChange={handleOverallRatingChange} value={overallRating}>
+                        <option value="none" disabled>--</option>
+                        <option value = "1" name="overall-rating">1</option>
+                        <option value = "2" name="overall-rating">2</option>
+                        <option value = "3" name="overall-rating">3</option>
+                        <option value = "4" name="overall-rating">4</option>
+                        <option value = "5" name="overall-rating">5</option>
+                    </select>
                 </div>
 
                 <label htmlFor="food-rating">Food</label>
                 <div className="food-rating">
-                    <input type="radio" name="food-rating" value="1" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="2" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="3" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="4" onChange={handleFoodRatingChange}></input>
-                    <input type="radio" name="food-rating" value="5" onChange={handleFoodRatingChange}></input>
+                    <select onChange={handleFoodRatingChange} value={foodRating}>
+                        <option value="none" disabled>--</option>
+                        <option value = "1" name="food-rating">1</option>
+                        <option value = "2" name="food-rating">2</option>
+                        <option value = "3" name="food-rating">3</option>
+                        <option value = "4" name="food-rating">4</option>
+                        <option value = "5" name="food-rating">5</option>
+                    </select>
                 </div>
 
                 <label htmlFor="service-rating">Service</label>
                 <div className="service-rating">
-                    <input type="radio" name="service-rating" value="1" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="2" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="3" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="4" onChange={handleServiceRatingChange}></input>
-                    <input type="radio" name="service-rating" value="5" onChange={handleServiceRatingChange}></input>
+                    <select onChange={handleServiceRatingChange} value={serviceRating}>
+                        <option value="none" disabled>--</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                    </select>
+
                 </div>
 
                 <label htmlFor="ambience-rating">Ambience</label>
-                <div className="ambience-rating">
-                    <input type="radio" name="ambience-rating" value="1" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="2" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="3" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="4" onChange={handleAmbienceRatingChange}></input>
-                    <input type="radio" name="ambience-rating" value="5" onChange={handleAmbienceRatingChange}></input>
+                    <div className="ambience-rating">
+                        <select onChange={handleAmbienceRatingChange} value={ambienceRating}>
+                            <option value="none" disabled>--</option>
+                            <option value = "1">1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                            <option value = "4">4</option>
+                            <option value = "5">5</option>
+                        </select>
+                    </div>
                 </div>
 
-                <label>Body
-                    <input type="textarea" value={body} onChange={(e) => {setBody(e.target.value)}} ></input>
+                <label>Comment
+                    <br></br>
+                    <textarea type="textarea" style={{height: "100px", width: "100%", marginTop: "8px", verticalAlign: "top"}} value={body} onChange={(e) => {setBody(e.target.value)}} ></textarea>
                 </label>
 
-                <button>Submit</button>
+                <button className="modal-button" style={{marginTop: "36px"}} type="submit">Submit</button>
             </form>
-
         </div>
         )
 }

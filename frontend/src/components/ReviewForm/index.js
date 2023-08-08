@@ -5,15 +5,15 @@ import { createReview } from "../../store/reviews";
 import { useParams } from "react-router-dom";
 
 
-function ReviewForm() {
+function ReviewForm({setShowReviewForm}) {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const {restaurantId} = useParams();
     const [body, setBody] = useState("");
-    const [overallRating, setOverallRating] = useState();
-    const [foodRating, setFoodRating] = useState();
-    const [serviceRating, setServiceRating] = useState();
-    const [ambienceRating, setAmbienceRating] = useState();
+    const [overallRating, setOverallRating] = useState("none");
+    const [foodRating, setFoodRating] = useState("none");
+    const [serviceRating, setServiceRating] = useState("none");
+    const [ambienceRating, setAmbienceRating] = useState("none");
     const [errors, setErrors] = useState([]);
 
 
@@ -37,7 +37,7 @@ function ReviewForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!body || !overallRating || !foodRating || !serviceRating || !ambienceRating) {
+        if (overallRating === "none"|| foodRating === "none"|| serviceRating === "none" || ambienceRating === "none" || !body || !overallRating || !foodRating || !serviceRating || !ambienceRating) {
             setErrors(["Must fill out all fields"]);
         } else {
             let newReview = {
@@ -50,6 +50,7 @@ function ReviewForm() {
                 body: body
             }
             dispatch(createReview(newReview))
+            setShowReviewForm(false)
         }
     }
 
