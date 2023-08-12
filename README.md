@@ -1,6 +1,6 @@
 # Chowtime
 
-A full-stack application that lets users book reservations at restaurants 
+Chowtime is an OpenTable clone that lets users book reservations at restaurants 
 
 ## Technologies
 * React
