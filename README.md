@@ -9,18 +9,21 @@ A full-stack application that lets users book reservations at restaurants
 * Ruby on Rails
 * BCrypt
 * Postgresql
-* AWS
+* AWS S3
 
 ## Features 
 ### User Authentication
 Users can sign up or log in to their account with BCrypt user authentication in the rails backend.
+User sessions persist despite closing out of the tab.
 
-### Restaurant Index Page
+### Restaurants
 Users can browse restaurants through available seeded data and see further details and reviews after clicking into a restaurant show page. 
 
 ### Reservations
 Users can book a reservation for restaurants, and can edit or delete the reservation.
 
 ### Reviews
-Users can write a review and rate a restaurant, as well as edit and delete the review.
+Reviews are viewable by the public, but only logged-in users can create, edit, and delete a review. 
+
+
 
